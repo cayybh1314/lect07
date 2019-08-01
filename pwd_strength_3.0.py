@@ -67,13 +67,13 @@ def main():
             print('密码要求包含字母！')
 
 
+        f = open('password.txt', 'a')
+        f.write('密码:{},强度:{}\n'.format(password,strength_level))
+        f.close()
+
         #结果，判断密码强度是否合适。
         if strength_level == 3:
             print('恭喜!,密码强度合格！')
-
-            f = open('password.txt', 'a')
-            f.write(password + '\n')
-            f.close()
 
             break
         else:
