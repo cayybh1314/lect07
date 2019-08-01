@@ -1,9 +1,9 @@
 """
     作者：zqc
     功能：判断密码强度
-    版本：v2.0
+    版本：v3.0
     日期：2019/07/24
-    2.0新增功能: 终止
+    3.0新增功能: python文件
 """
 
 def check_number_exist(password_str):
