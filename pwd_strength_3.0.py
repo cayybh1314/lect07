@@ -3,7 +3,7 @@
     功能：判断密码强度
     版本：v3.0
     日期：2019/07/24
-    3.0新增功能: python文件
+    3.0新增功能: 保存密码及强度到文件中.
 """
 
 def check_number_exist(password_str):
@@ -70,12 +70,19 @@ def main():
         #结果，判断密码强度是否合适。
         if strength_level == 3:
             print('恭喜!,密码强度合格！')
+
+            f = open('password.txt', 'a')
+            f.write(password + '\n')
+            f.close()
+
             break
         else:
             print('抱歉，密码强度不合格！')
             try_times -= 1
 
         print("<----------------------->")
+
+
 
     if try_times <= 0:
         print("尝试次数过多,密码设置失败!!!!")
