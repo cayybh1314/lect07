@@ -74,7 +74,6 @@ def main():
         #结果，判断密码强度是否合适。
         if strength_level == 3:
             print('恭喜!,密码强度合格！')
-
             break
         else:
             print('抱歉，密码强度不合格！')
